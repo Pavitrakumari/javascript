@@ -1,0 +1,22 @@
+{
+  "name": "javascriptprog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "javascriptprog.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pavitrakumari/javascript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pavitrakumari/javascript/issues"
+  },
+  "homepage": "https://github.com/Pavitrakumari/javascript#readme",
+  "dependencies": {
+    "prompt": "^1.0.0"
+  }
+}
