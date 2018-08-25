@@ -9,12 +9,17 @@ function hello()
 {
     read.question("enter a number upto which to print harmonic number",function(userinput)
     {   
-        var p=1;
-        for(i=2;i<=userinput;i++)
+        res=1;
+        for(var i=1;i<=userinput;i++)
         {
-             p=p+1.0/userinput;
+            res=res*i;
         }
-        console.log(p);
+        var p=0;
+        for(j=1;j<=userinput;j++)
+        {
+             p=p+res/j;
+        }
+        console.log(p+"/"+res);
         read.close();
     }
     );
