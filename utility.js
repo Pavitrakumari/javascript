@@ -1,3 +1,5 @@
+const _=require('lodash');
+var prompt=require('prompt-sync')();
 module.exports = {
     hello: function (userinput) {
         if (userinput.length >= 3) {
@@ -29,7 +31,7 @@ module.exports = {
 
         var n = userinput;
         n = 0;
-        for (i = 0; i <= n; i++)console.log("head percentage is : "(x / userinput) * 100 + " %");
+        for (i = 0; i <= n; i++)
         {
             var res = Math.pow(2, i);
             console.log("2 power of " + i + " is : " + res);
@@ -64,6 +66,16 @@ module.exports = {
         console.log(distinct);
         console.log("number of distinct components " + [distinct].length);
     },
+
+
+
+
+
+
+
+
+
+    /*PROGRAM FOR WINDCHILL */
     peight: function (stake, goal, num) {
         var loss = 0;
         var wins = 0;
@@ -83,7 +95,6 @@ module.exports = {
 
 
             }
-
             console.log(wins + " out of " + num);
             console.log("Percentage of winning = " + (wins / num) * 100);
             console.log("Percentage of loosing = " + (loss / num) * 100);
@@ -93,21 +104,16 @@ module.exports = {
             console.log("plzz give goal greater than stake to gamble......")
         }
     },
-    pnine: function (startime, endtime) {
-        var elapsedtime;
-        var press;
 
-        switch (press) {
-            case 1: console.log("starttime = " + startime + "(in milliseconds)");
-                break;
-            case 2: console.log("end time = " + endtime + "(in milliseconds)");
-                break;
 
-        }
-        elapsedtime = startime - endtime;
-        console.log("Total elapsed time(in milliseconds)=" + elapsedtime);
-        console.log("Converting milliseconds into seconds = " + elapsedtime / 1000 + " sec ");
-    },
+
+
+
+
+
+    
+
+    /*QUADRATIC EQUATION*/
     pten: function (a, b, c) {
         var delta = (b * b) - (4 * a * c);
         var root1 = (-(b) + Math.sqrt(delta)) / 2;
@@ -117,6 +123,11 @@ module.exports = {
         console.log("&");
         console.log("Root 2 =" + root2);
     },
+
+
+
+
+    /*PROGRAM FOR WINDCHILL*/
     pele: function (t, v) {
         var w;
         w = 35.74 + 0.6215 * t + (0.4275 * t - 35.75) * Math.pow(v, 0.16);
@@ -127,10 +138,77 @@ module.exports = {
        var distance
        distance=(x+y);
        console.log("The euclidean distance from the point ("+x+","+y+") to origin (0,0) is : "+distance); 
+    },
+
+
+
+
+
+
+
+
+    /*PROGRAM FOR TWO DIMENSIONAL ARRAY*/
+    array:function(row)
+    {
+        var arr=new Array(row);
+        var coloumn=prompt('enter no of coloumns');
+        for(var i=0;i<row;i++)
+        {
+            arr[i]=new Array(coloumn);
+            for(var j=0;j<coloumn;j++)
+            {    
+                arr[i][j]=prompt('enter element');
+
+            }
+
+        }
+        console.log(arr);
+    },
+triplets: function(rows) {
+    var arr = new Array(rows);//CREATES ARRAY FOR ROW
+    var array1 = new Array();//CREATING EMPTY ARRAY
+    //  var res='';
+    for (var index = 0; index < rows; index++)
+     {
+        arr[index] = prompt("enter element now  : ");
+
     }
+    for (var i = 0; i < arr.length-2; i++) {
+        for (var j = i + 1; j < arr.length-1; j++) {
+            for (var k = j + 1; k < arr.length; k++) {
+                var sum = Number(arr[i]) + Number(arr[j]) + Number(arr[k]);
+                if (sum == 0) {
+                    array1.push(arr[i] + ' , ' + arr[j] + ' , ' + arr[k]);
+
+                }
+            }
+        }
+    }
+    //array1=removeDuplicates(array1)
+    //console.log(array1);
+    
+     var unique=new Set(array1);
+     console.log("unique triplets are : [ "+[...unique]+" ] ");
+},
+/*function removeDuplicates(arr)
+{
+    var uniquearray = [];
+    for (var i = 0; i < arr.length; i++) 
+    {
+        if (uniquearray.indexOf(arr[i]) == -1) {
+            uniquearray.push(arr[i]);
+        }
+    }
+    console.log(uniquearray);
+    return uniquearray;
+    // console.log(removeDuplicates(array1));
+    //console.log(removeDuplicates(array1).length);*/
+
+
+
+
+
 }
-
-
 
 
 
