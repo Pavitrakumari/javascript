@@ -1,5 +1,7 @@
 var readLine=require('readline');
-var utility=require('./utility/utility.js');
+var utility = require('/home/administrator/js/javascript/utility.js');
+
+
 var read=readLine.createInterface(
   {
       input:process.stdin,

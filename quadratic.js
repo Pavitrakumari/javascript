@@ -12,8 +12,18 @@ function pten()
       read.question("enter the value of 'b' : ",function(b) {
           read.question("enter the value of 'c': ",function(c) {
                 
-                    utility.pten(a,b,c);
+              if (isNaN(a,b,c)) {
+                  console.log("plzz enter only numbers....");
+              }
+              else {      
+            
+            
+            
+            
+            
+            utility.pten(a,b,c);
                     read.close();
+              }
           });
 
        });

@@ -12,7 +12,9 @@ function stop2() {
     read.question("enter start time : ", function (start) {
         var num1 = start;
         if (num1 == 1) {
-            var start = new Date().getTime();
+            var start = new Date().getTime();/**
+             * getTime() function gives the current system time 
+             */
         }
         read.question("enter end time : ", function (end) {
             var num2 = end;
@@ -20,7 +22,7 @@ function stop2() {
                 var end = new Date().getTime();
             }
             var elapsed = end-start;
-            console.log("the elapsed time is : " + elapsed);
+            console.log("the elapsed time is : " + elapsed+" milliseconds");
             read.close();
         });
     });
